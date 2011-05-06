@@ -1,273 +1,396 @@
-html * {
-    margin: 0;
-    /*padding: 0; SELECT NOT DISPLAYED CORRECTLY IN FIREFOX */
+
+@-webkit-keyframes STAR-MOVE {
+        from {
+                background-position: 5% 5%
+        }
+        to {
+                background-position: 1300% 5%
+        }
 }
 
-/* GENERAL */
+input {
+    
+    font-family: 'VT323', arial, serif; 
+    font-size: 200%;
+}
 
-.spinner {
-    padding: 5px;
+#background {
+        background: black url(../images/background.png) repeat 5% 5%;
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 100;
+
+        -webkit-animation-name: STAR-MOVE;
+        -webkit-animation-duration: 400s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+}
+
+#midground {
+        background: url(../images/midground.png) repeat 20% 20%;
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 200;
+
+        -webkit-animation-name: STAR-MOVE;
+        -webkit-animation-duration: 300s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+}
+
+#foreground {
+        background: url(../images/foreground.png) repeat 35% 35%;
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: 300;
+
+        -webkit-animation-name: STAR-MOVE;
+        -webkit-animation-duration: 200s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+}
+#big-image {
+    z-index: 400;
+    
+
+    /*set the div in the bottom right corner*/
+    position:absolute;
+    bottom:82px;
+    left:50px;
+    background-image: url('../images/scassets.png');
+    background-position:0px -164px;
+    width: 326px;
+    height: 385px;
+    
+}
+#signup {
+    z-index: 400;
+    
     position: absolute;
-    right: 0;
+    bottom: 40px;
+    left: 50px;
+    
+}
+#signup-link {
+    z-index: 400;
+    text-decoration:none;
+    display:block;
+    
+    background-image: url('../images/scassets.png');
+    background-position: 0px 0px;
+    width: 130px;
+    height: 20px;
+    
+}
+#signup-link:hover,#signup-link:active  { background-position: -130px 0px; }
+
+#declare {
+  position: absolute;
+  top: -1200px;
+  right:200px;
+  z-index: 400;
+
 }
 
-body {
-    background: #fff;
-    color: #333;
-    font: 11px verdana, arial, helvetica, sans-serif;
-}
-#grailsLogo {
-	padding:20px;
+#declare input, #fieldleague-image, #leaguedrop-image, #declare select{
+  margin-bottom: 15px;
 }
 
-a:link, a:visited, a:hover {
-    color: #666;
-    font-weight: bold;
-    text-decoration: none;
+
+#panel-image {
+    /*set the div in the bottom right corner*/
+    /*
+    position:absolute;
+    top:-1000px;
+    right:200px;
+    */
+    background-image: url('../images/scassets.png');
+    background-position:-460px -250px;
+    background-repeat: none;
+    /*
+    width: 559px;
+    height: 902px;
+    */
+    width: 509px;
+    height: 500px;
+    padding-top: 140px;
+    padding-left: 50px;
+    
 }
 
-h1 {
-    color: #48802c;
-    font-weight: normal;
-    font-size: 16px;
-    margin: .8em 0 .3em 0;
+#declare-image {
+/*
+    z-index: 500;
+    position:absolute;
+    top:-625px;
+    right:250px;
+*/
+    background-image: url('../images/scassets.png');
+    background-position:0px -547px;
+    width: 465px;
+    height: 65px;
+    margin-bottom: 20px;
+    
 }
 
-ul {
-    padding-left: 15px;
+#fieldname-image {
+/*
+    z-index: 500;
+    
+    position: absolute;
+    top:-540px;
+    right:250px;
+  */
+    background-image: url('../images/scassets.png');
+    background-position:0px -124px;
+    width: 450px;
+    height: 38px;
+    
+    outline: none;
+    border:none;
+    
+    text-indent:3px;
+    
 }
 
-input, select, textarea {
-    background-color: #fcfcfc;
-    border: 1px solid #ccc;
-    font: 11px verdana, arial, helvetica, sans-serif;
-    margin: 2px 0;
-    padding: 2px 4px;
+#fieldemail-image {
+/*
+    z-index: 500;
+    
+    position: absolute;
+    top:-480px;
+    right:250px;
+    */
+    background-image: url('../images/scassets.png');
+    background-position:0px -124px;
+    width: 450px;
+    height: 38px;
+    
+    outline:none;
+    border:none;
+    text-indent:3px;
+    
+    
 }
+
+#fieldteam-image {
+/*
+    z-index: 500;
+    
+    position: absolute;
+    top:-420px;
+    right:250px;
+    */
+    background-image: url('../images/scassets.png');
+    background-position:0px -124px;
+    width: 450px;
+    height: 38px;
+    outline: none;
+    border:none;
+    
+    text-indent:3px;
+    
+}
+
+#fieldleague-image {
+/*
+    z-index: 500;
+    
+    position: absolute;
+    top:-360px;
+    right:250px;
+    */
+    background-image: url('../images/scassets.png');
+    background-position:0px -124px;
+    width: 450px;
+    height: 38px;
+    text-indent:3px;
+    
+    
+}
+
+#fieldmatchup-image {
+    z-index: 500;
+    
+    position: absolute;
+    top:-300px;
+    right:250px;
+    background-image: url('../images/scassets.png');
+    background-position:0px -124px;
+    width: 450px;
+    height: 38px;
+    text-indent:3px;
+    
+    
+}
+
+#fieldbnet-image {
+/*
+    z-index: 500;
+    
+    position: absolute;
+    top:-240px;
+    right:250px;
+*/
+    text-indent:3px;
+
+    background-image: url('../images/scassets.png');
+    background-position:0px -124px;
+    width: 450px;
+    height: 38px;
+    outline: none;
+    border:none;
+    
+}
+
+#submit-image {
+/*
+    z-index: 500;
+    
+    position: absolute;
+    top:-180px;
+    right:250px;
+    */
+    background-image: url('../images/scassets.png');
+    background-position:0px -70px;
+    width: 183px;
+    height: 54px;
+    float: right;
+    margin-right: 50px;
+    
+    
+}
+
+#submit-image:hover,#submit-image:active  { background-position: -183px -70px; }
+
+#x-image {
+/*
+    z-index: 500;
+    
+    position: absolute;
+    top:-180px;
+    right:437px;
+*/
+    background-image: url('../images/scassets.png');
+    background-position:0px -18px;
+    width: 52px;
+    height: 54px;
+    float: right;
+    margin-right: 10px;
+    
+    
+}
+
+#x-image:hover,#x-image:active  { background-position: -52px -18px; }
+
+#leaguedrop-image {
+    z-index: 500;
+    
+    position: absolute;
+    top:-360px;
+    right:250px;
+    background-image: url('../images/scassets.png');
+    background-position:-103px -18px;
+    width: 41px;
+    height: 54px;
+    
+    
+}
+
+#leaguedrop-image:hover,#leaguedrop-image:active  { background-position: -145px -18px; }
+
+
+#matchupdrop-image {
+    z-index: 500;
+    
+    position: absolute;
+    top:-300px;
+    right:250px;
+    background-image: url('../images/scassets.png');
+    background-position:-103px -18px;
+    width: 41px;
+    height: 54px;
+    
+    
+}
+
+#matchupdrop-image:hover,#matchupdrop-image:active  { background-position: -145px -18px; }
+
+
+
+#small-image {
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:1;
+}
+
+#page-wrap {
+	width: 720px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 300;
+	background: rgba(0,0,0,0.7);
+	overflow: hidden;
+	padding: 30px 50px;
+}
+/*#styled */
 select {
-   padding: 2px 2px 2px 0;
-}
-textarea {
-	width: 250px;
-	height: 150px;
-	vertical-align: top;
+
+    background-image: url('../images/dropinactive.png');
+    width: 450px;
+    height: 38px;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+
+/*background-image: url('../images/scassets.png');
+background-position:0px -124px;
+width: 450px;
+height: 38px;
+*/
+font-family: 'VT323', arial, serif; 
+font-size: 200%;
+
 }
 
-input:focus, select:focus, textarea:focus {
-    border: 1px solid #b2d1ff;
-}
+#styled, #matchup {
+-webkit-appearance:none;
+-moz-appearance:none;
 
-.body {
-    float: left;
-    margin: 0 15px 10px 15px;
-}
+border:none;
+outline:none;
+background-color:transparent;
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+color:#888;
+text-indent:3px;
+background-image: url('../images/dropinactive.png');
+/*background-position: center right;
+background-repeat: no-repeat;
+*/}
+#styled:hover,#styled:active  { background-image: url('../images/dropactive.png');}
+#matchup:hover,#matchup:active  { background-image: url('../images/dropactive.png');}
 
-/* NAVIGATION MENU */
 
-.nav {
-    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
-    border: 1px solid #ccc;
-    border-style: solid none solid none;
-    margin-top: 5px;
-    padding: 7px 12px;
-}
+#customStyleSelectBox { background-image: url('../images/scassets.png');
+background-position:0px -124px;
+width: 450px;
+height: 38px;
+font-family: 'VT323', arial, serif; 
+font-size: 200%;
+/* position: absolute; top: 250; right: 250;z-index: 500; */
 
-.menuButton {
-    font-size: 10px;
-    padding: 0 5px;
 }
-.menuButton a {
-    color: #333;
-    padding: 4px 6px;
+#customStyleSelectBox.changed { background-image: url('../images/scassets.png');
+background-position:0px -124px;
+width: 450px;
+height: 38px;
+font-family: 'VT323', arial, serif;
+ 
 }
-.menuButton a.home {
-    background: url(../images/skin/house.png) center left no-repeat;
-    color: #333;
-    padding-left: 25px;
-}
-.menuButton a.list {
-    background: url(../images/skin/database_table.png) center left no-repeat;
-    color: #333;
-    padding-left: 25px;
-}
-.menuButton a.create {
-    background: url(../images/skin/database_add.png) center left no-repeat;
-    color: #333;
-    padding-left: 25px;
-}
-
-/* MESSAGES AND ERRORS */
-
-.message {
-    background: #f3f8fc url(../images/skin/information.png) 8px 50% no-repeat;
-    border: 1px solid #b2d1ff;
-    color: #006dba;
-    margin: 10px 0 5px 0;
-    padding: 5px 5px 5px 30px
-}
-
-div.errors {
-    background: #fff3f3;
-    border: 1px solid red;
-    color: #cc0000;
-    margin: 10px 0 5px 0;
-    padding: 5px 0 5px 0;
-}
-div.errors ul {
-    list-style: none;
-    padding: 0;
-}
-div.errors li {
-	background: url(../images/skin/exclamation.png) 8px 0% no-repeat;
-    line-height: 16px;
-    padding-left: 30px;
-}
-
-td.errors select {
-    border: 1px solid red;
-}
-td.errors input {
-    border: 1px solid red;
-}
-td.errors textarea {
-    border: 1px solid red;
-}
-
-/* TABLES */
-
-table {
-    border: 1px solid #ccc;
-    width: 100%
-}
-tr {
-    border: 0;
-}
-td, th {
-    font: 11px verdana, arial, helvetica, sans-serif;
-    line-height: 12px;
-    padding: 5px 6px;
-    text-align: left;
-    vertical-align: top;
-}
-th {
-    background: #fff url(../images/skin/shadow.jpg);
-    color: #666;
-    font-size: 11px;
-    font-weight: bold;
-    line-height: 17px;
-    padding: 2px 6px;
-}
-th a:link, th a:visited, th a:hover {
-    color: #333;
-    display: block;
-    font-size: 10px;
-    text-decoration: none;
-    width: 100%;
-}
-th.asc a, th.desc a {
-    background-position: right;
-    background-repeat: no-repeat;
-}
-th.asc a {
-    background-image: url(../images/skin/sorted_asc.gif);
-}
-th.desc a {
-    background-image: url(../images/skin/sorted_desc.gif);
-}
-
-.odd {
-    background: #f7f7f7;
-}
-.even {
-    background: #fff;
-}
-
-/* LIST */
-
-.list table {
-    border-collapse: collapse;
-}
-.list th, .list td {
-    border-left: 1px solid #ddd;
-}
-.list th:hover, .list tr:hover {
-    background: #b2d1ff;
-}
-
-/* PAGINATION */
-
-.paginateButtons {
-    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
-    border: 1px solid #ccc;
-    border-top: 0;
-    color: #666;
-    font-size: 10px;
-    overflow: hidden;
-    padding: 10px 3px;
-}
-.paginateButtons a {
-    background: #fff;
-    border: 1px solid #ccc;
-    border-color: #ccc #aaa #aaa #ccc;
-    color: #666;
-    margin: 0 3px;
-    padding: 2px 6px;
-}
-.paginateButtons span {
-    padding: 2px 3px;
-}
-
-/* DIALOG */
-
-.dialog table {
-    padding: 5px 0;
-}
-
-.prop {
-    padding: 5px;
-}
-.prop .name {
-    text-align: left;
-    width: 15%;
-    white-space: nowrap;
-}
-.prop .value {
-    text-align: left;
-    width: 85%;
-}
-
-/* ACTION BUTTONS */
-
-.buttons {
-    background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
-    border: 1px solid #ccc;
-    color: #666;
-    font-size: 10px;
-    margin-top: 5px;
-    overflow: hidden;
-    padding: 0;
-}
-
-.buttons input {
-    background: #fff;
-    border: 0;
-    color: #333;
-    cursor: pointer;
-    font-size: 10px;
-    font-weight: bold;
-    margin-left: 3px;
-    overflow: visible;
-    padding: 2px 6px;
-}
-.buttons input.delete {
-    background: transparent url(../images/skin/database_delete.png) 5px 50% no-repeat;
-    padding-left: 28px;
-}
-.buttons input.edit {
-    background: transparent url(../images/skin/database_edit.png) 5px 50% no-repeat;
-    padding-left: 28px;
-}
-.buttons input.save {
-    background: transparent url(../images/skin/database_save.png) 5px 50% no-repeat;
-    padding-left: 28px;
+#customStyleSelectBoxInner { background-image: url('../images/scassets.png') no-repeat center right;
+background-position:-103px -18px;
+width: 41px;
+height: 54px;
+z-index: 700;
 }
